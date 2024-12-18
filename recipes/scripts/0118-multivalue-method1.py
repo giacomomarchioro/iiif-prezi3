@@ -1,5 +1,7 @@
 from iiif_prezi3 import Manifest, KeyValueString
 
+base_url = "https://iiif.io/api/cookbook/recipe/0118-multivalue"
+
 manifest = Manifest(id="https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json",
                     label={"fr": ["Arrangement en gris et noir no 1"]})
 manifest.metadata = [
@@ -18,4 +20,4 @@ anno_page = canvas.add_image(image_url="https://upload.wikimedia.org/wikipedia/c
 
 canvas.items[0].items[0].id = "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1"
 
-print(manifest.json(indent=2, ensure_ascii=False))
+print(manifest.json(indent=2))
